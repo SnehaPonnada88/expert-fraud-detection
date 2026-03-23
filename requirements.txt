@@ -1,0 +1,9 @@
+gymnasium
+stable-baselines3
+numpy
+pandas
+streamlit
+scikit-learn
+matplotlib
+openai
+python-dotenv
