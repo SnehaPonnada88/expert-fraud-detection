@@ -2,9 +2,10 @@ import json
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
+import streamlit as st
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY")) or st.secrets.get("OPENAI_API_KEY")
 
 def extract_signals(answer):
     prompt = f"""
